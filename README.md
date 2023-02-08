@@ -2,10 +2,7 @@
 
 Rick and Morty API Clone with React and GraphQL 
 
-![icons8-react-480](https://user-images.githubusercontent.com/68347411/217638167-9a422f08-cdea-4aa4-9b2b-3880df3903ae.png)
-
-
-![icons8-graphql-480](https://user-images.githubusercontent.com/68347411/217638085-afcfc00e-f633-430e-adb7-a6b02c22368d.png)
+![icons8-react-480](https://user-images.githubusercontent.com/68347411/217638167-9a422f08-cdea-4aa4-9b2b-3880df3903ae.png)![icons8-graphql-480](https://user-images.githubusercontent.com/68347411/217638085-afcfc00e-f633-430e-adb7-a6b02c22368d.png)
 
 
 HomeScreen  (Homescreen characters cards are random)
