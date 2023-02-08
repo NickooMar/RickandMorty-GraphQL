@@ -5,6 +5,11 @@ import { GET_CHARACTERS } from "../../graphql/characters";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
+import { Loader } from "../Loader";
+import CharactersCard from "./CharactersCard";
+
+import Banner from "../../assets/Banner.png";
+
 const CharactersList = () => {
   const params = useParams();
   const { loading, error, data } = useQuery(GET_CHARACTERS, {
@@ -13,16 +18,53 @@ const CharactersList = () => {
 
   console.log(data);
 
-  if(loading) return <p>Loading...</p>
+  if (loading)
+    return (
+      <div className="flex items-center justify-center mt-20 h-screen bg-[#272b33]">
+        <Loader />
+      </div>
+    );
 
   return (
     <div>
-      {data.characters.results.map((character) => (
-        <h1>{character.name}</h1>
-      ))}
+      <div className="h-full w-full bg-white flex flex-col justify-center items-center ">
+        <img
+          src={Banner}
+          alt="Banner"
+          className="h-1/2 w-1/2 relative opacity-10"
+        />
+        <h1
+          className="text-7xl font-semibold text-center absolute opacity-85"
+          style={{ fontFamily: "montserrat" }}
+        >
+          Characters
+        </h1>
+      </div>
+
+      <div className="grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 gap-4 mx-2 py-4 place-items-center">
+        {data.characters.results.map((character) => (
+          <CharactersCard character={character} />
+        ))}
+      </div>
+
       <div className="flex justify-around mx-10">
-        <Link className="p-2 bg-slate-600 text-white rounded-lg" to={{pathname: '/characters/' + (parseInt(params.page) - 1)}}>Prev</Link>
-        <Link className="p-2 bg-slate-600 text-white rounded-lg" to={{pathname: '/characters/' + (parseInt(params.page) + 1)}}>Next</Link>
+        {parseInt(params.page) > 1 && (
+          <Link
+            className="p-2 bg-slate-300 rounded-lg"
+            to={{ pathname: "/characters/" + (parseInt(params.page) - 1) }}
+          >
+            Prev
+          </Link>
+        )}
+
+        {parseInt(params.page) < parseInt(data.characters.info.pages) && (
+          <Link
+            className="p-2 bg-slate-300 rounded-lg"
+            to={{ pathname: "/characters/" + (parseInt(params.page) + 1) }}
+          >
+            Next
+          </Link>
+        )}
       </div>
     </div>
   );
