@@ -35,6 +35,7 @@ const App = () => {
         </div>
       </nav>
       <Routes>
+        <Route path="*" element={<Homepage />} />
         <Route path="/" element={<Homepage />} />
         <Route path="/characters/:page" element={<Characters />} />
       </Routes>

@@ -47,10 +47,10 @@ const CharactersList = () => {
         ))}
       </div>
 
-      <div className="flex justify-around mx-10">
+      <div className="flex justify-around mx-10 pb-5 pt-5">
         {parseInt(params.page) > 1 && (
           <Link
-            className="p-2 bg-slate-300 rounded-lg"
+            className="p-2 rounded-lg w-full text-center bg-orange-500 text-white text-2xl mr-5"
             to={{ pathname: "/characters/" + (parseInt(params.page) - 1) }}
           >
             Prev
@@ -59,7 +59,7 @@ const CharactersList = () => {
 
         {parseInt(params.page) < parseInt(data.characters.info.pages) && (
           <Link
-            className="p-2 bg-slate-300 rounded-lg"
+            className="p-2 rounded-lg w-full text-center bg-orange-500 text-white text-2xl"
             to={{ pathname: "/characters/" + (parseInt(params.page) + 1) }}
           >
             Next
