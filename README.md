@@ -1,6 +1,7 @@
 # RickandMorty-GraphQL
 
 Rick and Morty API Clone with React and GraphQL 
+
 ![icons8-react-16](https://user-images.githubusercontent.com/68347411/217637912-8b5e5d59-0957-4fcb-950b-1452e0f3715a.png)
 
 ![icons8-graphql-48](https://user-images.githubusercontent.com/68347411/217637868-0df79633-fa07-4e7c-8873-ea5f82828570.png)
