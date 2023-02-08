@@ -1,6 +1,8 @@
 # RickandMorty-GraphQL
 
-Rick and Morty API Clone with React and GraphQL
+Rick and Morty API Clone with React and GraphQL 
+https://icons8.com/icon/zdI5E8moxhs-/graphql
+https://icons8.com/icons/set/graphql
 
 HomeScreen  (Homescreen characters cards are random)
 ![imagen](https://user-images.githubusercontent.com/68347411/217636639-cfac02b7-fc65-44aa-a9ff-2feafa9141e8.png)
