@@ -34,7 +34,7 @@ const CharactersList = () => {
           className="h-1/2 w-1/2 relative opacity-10"
         />
         <h1
-          className="text-7xl font-semibold text-center absolute opacity-85"
+          className="md:text-lg xl:text-7xl font-semibold text-center absolute opacity-85"
           style={{ fontFamily: "montserrat" }}
         >
           Characters
